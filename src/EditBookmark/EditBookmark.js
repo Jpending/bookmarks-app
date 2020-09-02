@@ -35,7 +35,7 @@ class EditBookmark extends Component {
     fetch(config.API_ENDPOINT + `/${bookmarkId}`, {
       method: 'GET',
       headers: {
-        'authorization': `Bearer ${process.env.API_KEY}`
+        'authorization': `Bearer ${config.API_KEY}`
       }
     })
       .then(res => {
@@ -85,7 +85,7 @@ class EditBookmark extends Component {
       body: JSON.stringify(newBookmark),
       headers: {
         'content-type': 'application/json',
-        'authorization': `Bearer ${process.env.API_KEY}`
+        'authorization': `Bearer ${config.API_KEY}`
       },
     })
       .then(res => {
